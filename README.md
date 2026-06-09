@@ -25,6 +25,13 @@ npm run build    # production build → dist/
 npm run preview  # preview the production build
 ```
 
+## Deploy
+
+Hosted on **GitHub Pages** at [levcreates.com](https://levcreates.com); every
+push to `main` auto-builds and publishes via GitHub Actions. Full setup, DNS
+records, HTTPS, and the gotchas we hit are documented in
+[`DEPLOYMENT.md`](DEPLOYMENT.md).
+
 ## Structure
 
 ```
