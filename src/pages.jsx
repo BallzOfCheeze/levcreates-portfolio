@@ -306,7 +306,7 @@ function BPageFilm() {
           <span style={{ flex: 1, height: 1, background: B_COL.rule }} />
           <span style={{ ...bStyles.mono, fontSize: 9, color: B_COL.mute, letterSpacing: '0.16em' }}>{h.festival.toUpperCase()} · {h.year}</span>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '260px 654px', gap: 22, alignItems: 'start', maxWidth: '100%' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '260fr 654fr', gap: 22, alignItems: 'start', maxWidth: '100%' }}>
           <a href={h.poster} target="_blank" rel="noreferrer" style={{ display: 'block', border: `1px solid ${B_COL.ink}`, lineHeight: 0 }}>
             <img src={h.poster} alt="Text Me When You're Home poster" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </a>
@@ -334,7 +334,7 @@ function BPageFilm() {
               <p style={{ fontSize: 13.5, lineHeight: 1.6, color: B_COL.mute, margin: '0 0 18px', maxWidth: 520 }}>{g.blurb}</p>}
             {g.poster ? (
               <div>
-                <div style={{ display: 'grid', gridTemplateColumns: '260px 654px', gap: 22, alignItems: 'start', maxWidth: '100%' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '260fr 654fr', gap: 22, alignItems: 'start', maxWidth: '100%' }}>
                   <a href={g.poster} target="_blank" rel="noreferrer" style={{ display: 'block', border: `1px solid ${B_COL.ink}`, lineHeight: 0 }}>
                     <img src={g.poster} alt="Gourmet Hound poster" style={{ width: '100%', height: 'auto', display: 'block' }} />
                   </a>
@@ -896,6 +896,18 @@ function BPageAbout() {
               <p key={i} style={{ margin: i === a.paras.length - 1 ? 0 : '0 0 14px' }}>{p}</p>,
             )}
           </div>
+          {/* CV — sits below the text in the left column */}
+          <div style={{ marginTop: 36, maxWidth: 360 }}>
+            <div style={{ ...bStyles.mono, fontSize: 9, color: B_COL.mute, marginBottom: 8 }}>CURRICULUM VITAE</div>
+            <BCvThumb src="/assets/levi-cv.pdf" accent="teal" />
+            <a href="/assets/levi-cv.pdf" download="Levi Vandenheede — CV.pdf"
+              style={{ marginTop: 14, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, background: B_COL.burgundy, color: B_COL.cream, padding: '15px 22px', textDecoration: 'none' }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = B_COL.ink }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = B_COL.burgundy }}>
+              <span style={{ ...bStyles.display, fontStyle: 'italic', fontSize: 22 }}>Download my CV</span>
+              <span style={{ ...bStyles.mono, fontSize: 10, color: B_COL.gold, display: 'inline-flex', alignItems: 'center', gap: 8 }}>PDF · EN <span style={{ fontSize: 15 }}>↓</span></span>
+            </a>
+          </div>
         </div>
         <div>
           <BPhoto src="/assets/lev-sunset.jpg" ratio="4/5" accent="teal" label="LAKESHORE · SUNSET" style={{ marginBottom: 20 }} />
@@ -906,15 +918,6 @@ function BPageAbout() {
               <span style={{ ...bStyles.mono, fontSize: 10, color: B_COL.mute }}>{v}</span>
             </div>,
           )}
-          <div style={{ ...bStyles.mono, fontSize: 9, color: B_COL.mute, margin: '20px 0 8px' }}>CURRICULUM VITAE</div>
-          <BCvThumb src="/assets/levi-cv.pdf" accent="teal" />
-          <a href="/assets/levi-cv.pdf" download="Levi Vandenheede — CV.pdf"
-            style={{ marginTop: 14, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, background: B_COL.burgundy, color: B_COL.cream, padding: '15px 22px', textDecoration: 'none' }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = B_COL.ink }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = B_COL.burgundy }}>
-            <span style={{ ...bStyles.display, fontStyle: 'italic', fontSize: 22 }}>Download my CV</span>
-            <span style={{ ...bStyles.mono, fontSize: 10, color: B_COL.gold, display: 'inline-flex', alignItems: 'center', gap: 8 }}>PDF · EN <span style={{ fontSize: 15 }}>↓</span></span>
-          </a>
         </div>
       </div>
 
