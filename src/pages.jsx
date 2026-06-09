@@ -896,8 +896,8 @@ function BPageAbout() {
               <p key={i} style={{ margin: i === a.paras.length - 1 ? 0 : '0 0 14px' }}>{p}</p>,
             )}
           </div>
-          {/* CV — sits below the text in the left column */}
-          <div style={{ marginTop: 36, maxWidth: 360 }}>
+          {/* CV — sits below the text, full left-column width */}
+          <div style={{ marginTop: 36 }}>
             <div style={{ ...bStyles.mono, fontSize: 9, color: B_COL.mute, marginBottom: 8 }}>CURRICULUM VITAE</div>
             <BCvThumb src="/assets/levi-cv.pdf" accent="teal" />
             <a href="/assets/levi-cv.pdf" download="Levi Vandenheede — CV.pdf"
